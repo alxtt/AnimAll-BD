@@ -6,7 +6,7 @@ set -euo pipefail
 declare serverName=animall
 declare databaseName=AnimAll-BD
 declare adminUser=animal
-declare adminPassword=LeLa8bmR_BD
+declare adminPassword=
 declare location=northeurope
 declare resourceGroup=animall-project
 
