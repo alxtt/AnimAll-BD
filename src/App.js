@@ -3,16 +3,15 @@ import './styles/App.css';
 import SearchBar from "./components/SearchBar";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
+import PostItem from "./components/PostItem";
 
 function App() {
 
   return (
     <div className="App">
-        <form>
-                <Navbar/>
-                <Main/>
-                <SearchBar/>
-        </form>
+        <PostItem/>
+        <PostItem/>
+        <PostItem/>
     </div>
   );
 }
