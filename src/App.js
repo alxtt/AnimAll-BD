@@ -5,16 +5,16 @@ import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 
 function App() {
+  const [data, setData] = useState('');
 
-  return (
-    <div className="App">
-        <form>
-                <Navbar/>
-                <Main/>
-                <SearchBar/>
-        </form>
-    </div>
-  );
+  useEffect(() => {
+    (async function () {
+      const { text } = await( await fetch(`/api/message`)).json();
+      setData(text);
+    })();
+  });
+
+  return <div>{data}</div>;
 }
 
 export default App;
