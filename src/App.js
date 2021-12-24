@@ -1,19 +1,16 @@
-import React, {useState} from 'react'
-import './styles/App.css';
-import SearchBar from "./components/SearchBar";
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
-import PostItem from "./components/PostItem";
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [data, setData] = useState('');
 
-  return (
-    <div className="App">
-        <PostItem/>
-        <PostItem/>
-        <PostItem/>
-    </div>
-  );
+  useEffect(() => {
+    (async function () {
+      const { text } = await( await fetch(`/api/message`)).json();
+      setData(text);
+    })();
+  });
+
+  return <div>{data}</div>;
 }
 
 export default App;

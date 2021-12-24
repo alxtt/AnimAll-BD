@@ -1,16 +1,23 @@
 import React from 'react';
+import MyButton from "./UI/button/MyButton";
+import {useHistory} from 'react-router-dom';
 
 const PostItem = (props) => {
+    const router = useHistory()
+
     return (
         <div className="post">
             <div className="post__content">
-                <strong>1. Javascript</strong>
-                <div>
-                    Text
+                <div className="petimage"></div>
+                <div className="petdesc">
+                    <h1>{props.post.title}</h1>
+                    {props.post.body}
                 </div>
             </div>
-            <div className="post_buttons">
-                <button>Удалить</button>
+            <div className="post__btns">
+                <MyButton>
+                    I adopt
+                </MyButton>
             </div>
         </div>
     );
