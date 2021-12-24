@@ -1,14 +1,16 @@
 import React from 'react';
-import MyButton from "../components/UI/button/MyButton";
-import MyInput from "../components/UI/input/MyInput";
+import CustomInput from "./UI/Input/CustomInput";
+import CustomButton from "./UI/Button/CustomButton";
+import SearchButton from "./UI/Button/SearchButton";
+
 const SearchBar = (props) => {
     return (
         <div className="search">
-            <MyInput type="text" placeholder="Поиск"/>
+            <CustomInput type="text" placeholder="Поиск"/>
             <div className="search_buttons">
                 <div className="group-1">
                     <div className="rectangle">
-                        <MyButton>Search</MyButton>
+                        <SearchButton/>
                     </div>
                 </div>
             </div>
