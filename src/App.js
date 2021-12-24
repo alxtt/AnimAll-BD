@@ -1,20 +1,18 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react';
 import './styles/App.css';
-import SearchBar from "./components/SearchBar";
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
+import {BrowserRouter} from "react-router-dom";
+import Navbar from "./components/UI/Navbar/Navbar";
+import AppRouter from "./components/AppRouter";
 
 function App() {
 
-  return (
-    <div className="App">
-        <form>
+    return (
+            <BrowserRouter>
                 <Navbar/>
-                <Main/>
-                <SearchBar/>
-        </form>
-    </div>
-  );
+                <AppRouter/>
+            </BrowserRouter>
+
+    )
 }
 
 export default App;
